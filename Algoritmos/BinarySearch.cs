@@ -8,6 +8,7 @@ namespace Algoritmos
     {
         #region Page 27 example
         private readonly List<int> list;
+
         public BinarySearch(List<int> _list)
         {
             list = _list;
@@ -57,6 +58,33 @@ namespace Algoritmos
         {
             //log.2. 256 = 8
             return Math.Log2(256);
+        }
+
+        #endregion
+
+        #region Extra
+        //StackOverFlow Execption with large lists (too many recursivity?)
+        public int? ExecuteRecursive(int item)
+        {
+            var bottomIndex = 0;
+            var topIndex = list.Count - 1;
+            return ExecuteRecursive(item, bottomIndex, topIndex);
+        }
+
+        public int? ExecuteRecursive(int item, int bottomIndex, int topIndex)
+        {
+            int middle = (bottomIndex + topIndex) / 2;
+            int guess = list[middle];
+            if (guess == item)
+                return middle;
+
+            if (guess > item)
+                return ExecuteRecursive(item, bottomIndex, middle - 1);
+
+            if (guess < item)
+                return ExecuteRecursive(item, middle + 1, topIndex);
+
+            return null;
         }
 
         #endregion
