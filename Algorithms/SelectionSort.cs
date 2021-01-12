@@ -13,7 +13,7 @@ namespace Algorithms
             list = _list;
         }
 
-        public SelectionSort(int lenght, int min, int max)
+        public SelectionSort(int lenght = int.MaxValue, int min = 0, int max = int.MaxValue)
         {
             var random = new Random();
             list = new int[lenght];

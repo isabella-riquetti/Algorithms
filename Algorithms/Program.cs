@@ -1,5 +1,4 @@
-﻿using Algorithms;
-using System;
+﻿using System;
 
 namespace Algorithms
 {
@@ -7,16 +6,9 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            var binarySearch = new SelectionSort(10, 0, 100);
-            var result1 = binarySearch.Execute();
-            Console.WriteLine("Resultado 1: ");
-            foreach (var r1 in result1)
-                Console.Write(r1 + "\t");
-
-            //No way
-            var binarySearch2 = new SelectionSort(99999999, 0, 99999999);
-            var result2 = binarySearch2.Execute();
-            Console.WriteLine(result2);
+            var linkedList = LinkedListTest.Gen(99999999);
+            linkedList.Reverse();
+            linkedList.Reverse2();
 
             Console.ReadKey();
         }

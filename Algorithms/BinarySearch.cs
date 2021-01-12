@@ -11,7 +11,7 @@ namespace Algorithms
             list = _list;
         }
 
-        public BinarySearch(int lenght)
+        public BinarySearch(int lenght = int.MaxValue)
         {
             list = new List<int>();
             for (int i = 0; i < lenght; i++)
