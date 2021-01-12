@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Algoritmos
+namespace Algorithms
 {
     public class BinarySearch
     {
-        #region Page 27 example
         private readonly List<int> list;
 
         public BinarySearch(List<int> _list)
@@ -18,8 +15,10 @@ namespace Algoritmos
         {
             list = new List<int>();
             for (int i = 0; i < lenght; i++)
-                list.Add(i*5);
+                list.Add(i * 5);
         }
+
+        #region Page 27 example
 
         public int? Execute(int item)
         {
@@ -44,22 +43,6 @@ namespace Algoritmos
 
             return null;
         }
-        #endregion
-
-        #region Page 28 exercises
-
-        public double Section1Exercise1()
-        {
-            //log.2. 128 = 7
-            return Math.Log2(128);
-        }
-
-        public double Section1Exercise2()
-        {
-            //log.2. 256 = 8
-            return Math.Log2(256);
-        }
-
         #endregion
 
         #region Extra
